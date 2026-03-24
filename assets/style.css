@@ -8,15 +8,24 @@ body {
 
 /* HEADER */
 header {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover no-repeat;
   color: white;
-  padding: 80px 20px;
   text-align: center;
+  padding: 100px 20px;
 }
-
+.cta {
+  background: #28a745;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.cta:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
 /* SECTIONS */
 section {
   padding: 50px 20px;
