@@ -1,59 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lavado a presión profesional en Noblesville. Casas, entradas, patios y más. Llame al (317) 903-8066 para una cotización gratis.">
-  <title>AZ PowerWash</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/az-powerwash-site/assets/style.css">
-</head>
-<body>
+/* General */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  color: #333;
+}
 
-<!-- Language toggle -->
-<div class="lang-switch">
-  <a href="/az-powerwash-site/en/">English</a> | <a href="/az-powerwash-site/es/">Español</a>
-</div>
+/* Language Switch */
+.lang-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
 
-<!-- Hero -->
-<header>
-  <h1>Servicios Profesionales de Lavado a Presión en Noblesville</h1>
-  <p><strong>Negocio local.</strong> Servicios rápidos, económicos y confiables para hogares y negocios.</p>
-  <a class="cta" href="tel:13179038066">📞 Llame Ahora: (317) 903-8066</a>
-</header>
+/* Header / Hero */
+header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+header h1 { font-size: 2.5em; margin-bottom: 10px; }
+header p { font-size: 1.2em; margin-bottom: 20px; }
+header .cta { 
+  background: #28a745; color: white; padding: 20px 40px; 
+  border-radius: 8px; text-decoration: none; font-weight: bold;
+  transition: all 0.3s;
+}
+header .cta:hover { background: #218838; transform: scale(1.05); }
 
-<!-- Trusted Section -->
-<section class="trusted">
-  <h2>Servicio Confiable en Noblesville</h2>
-  <p>Ayudamos a propietarios de viviendas y negocios a mantener sus propiedades limpias y en excelente condición durante todo el año.</p>
-</section>
+/* Sections */
+section { padding: 50px 20px; max-width: 900px; margin: auto; }
+section:nth-of-type(even) { background: #f9f9f9; }
 
-<!-- Services -->
-<section class="services">
-  <h2>Servicios</h2>
-  <div class="card">
-    <h3>Lavado de casas</h3>
-    <p>Restaure su hogar de manera segura y eficiente.</p>
-  </div>
-  <div class="card">
-    <h3>Limpieza de entradas y concreto</h3>
-    <p>Elimine suciedad, aceite y moho de manera rápida.</p>
-  </div>
-  <div class="card">
-    <h3>Limpieza de patios y terrazas</h3>
-    <p>Haga que sus espacios exteriores luzcan como nuevos.</p>
-  </div>
-  <div class="card">
-    <h3>Limpieza de cercas</h3>
-    <p>Limpiamos y mantenemos sus cercas con cuidado.</p>
-  </div>
-  <div class="card">
-    <h3>Lavado comercial</h3>
-    <p>Mantenga su propiedad comercial limpia e invitante.</p>
-  </div>
-</section>
+/* Service Cards */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-5px); }
 
-/* Before/After slider */
+/* Why Choose / Service Area Lists */
+.why-choose ul { list-style: none; padding: 0; }
+.why-choose ul li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Before/After Slider */
 .before-after { text-align:center; padding:50px 20px; }
 .ba-container { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
 .ba-image { position: relative; width:300px; overflow:hidden; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
@@ -67,29 +76,13 @@
 .testimonial p { font-style:italic; margin-bottom:10px; }
 .testimonial strong { display:block; color:#28a745; }
 
-<!-- Why Choose Us -->
-<section class="why-choose">
-  <h2>Por Qué Elegirnos</h2>
-  <ul>
-    <li>Servicio rápido y confiable</li>
-    <li>Precios accesibles</li>
-    <li>Negocio local</li>
-    <li>100% satisfacción garantizada</li>
-  </ul>
-</section>
+/* Quote CTA */
+.quote .cta { display:inline-block; margin-top:10px; padding:15px 30px; }
 
-<!-- Service Area -->
-<section class="service-area">
-  <h2>Área de Servicio</h2>
-  <p>Sirviendo Noblesville y áreas cercanas como Fishers y Carmel.</p>
-</section>
-
-<!-- Quote CTA -->
-<section class="quote">
-  <h2>Solicite una Cotización Hoy</h2>
-  <p>Llame ahora para servicio rápido en Noblesville y áreas cercanas.</p>
-  <a class="cta" href="tel:13179038066">📞 Llame (317) 903-8066</a>
-</section>
-
-</body>
-</html>
+/* Responsive */
+@media (max-width: 600px) {
+  header { padding: 60px 20px; }
+  header h1 { font-size: 2em; }
+  .services { grid-template-columns: 1fr; }
+  .ba-container { flex-direction: column; }
+}
