@@ -61,6 +61,12 @@
 .ba-image:hover img { transform: scale(1.05); }
 .label { position:absolute; bottom:10px; left:10px; background:#28a745; color:white; padding:5px 10px; border-radius:5px; font-weight:bold; }
 
+/* Testimonials */
+.testimonials { background:#f9f9f9; padding:50px 20px; text-align:center; }
+.testimonial { max-width:600px; margin:20px auto; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.testimonial p { font-style:italic; margin-bottom:10px; }
+.testimonial strong { display:block; color:#28a745; }
+
 <!-- Why Choose Us -->
 <section class="why-choose">
   <h2>Por Qué Elegirnos</h2>
