@@ -53,6 +53,14 @@
   </div>
 </section>
 
+/* Before/After slider */
+.before-after { text-align:center; padding:50px 20px; }
+.ba-container { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.ba-image { position: relative; width:300px; overflow:hidden; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.ba-image img { width:100%; display:block; transition: transform 0.3s; }
+.ba-image:hover img { transform: scale(1.05); }
+.label { position:absolute; bottom:10px; left:10px; background:#28a745; color:white; padding:5px 10px; border-radius:5px; font-weight:bold; }
+
 <!-- Why Choose Us -->
 <section class="why-choose">
   <h2>Por Qué Elegirnos</h2>
