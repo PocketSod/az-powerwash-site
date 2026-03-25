@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional power washing in Noblesville. House washing, driveways, patios, and more. Call (317) 903-8066 for a free quote.">
+  <meta name="description" content="Professional power washing in Noblesville. Call (317) 903-8066 for a free quote.">
   <title>AZ PowerWash</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -21,6 +22,13 @@
   <p><strong>Locally owned and operated.</strong> Fast, affordable, and reliable service for homes and businesses.</p>
   <a class="cta" href="tel:13179038066">📞 Call Now: (317) 903-8066</a>
 </header>
+
+<!-- ⭐ Reviews -->
+<section class="reviews">
+  <h2>Highly Rated by Local Homeowners</h2>
+  <div class="stars">★★★★★</div>
+  <p>5.0 stars from satisfied customers in Noblesville and surrounding areas</p>
+</section>
 
 <!-- Trusted Section -->
 <section class="trusted">
@@ -53,56 +61,67 @@
   </div>
 </section>
 
-<!-- Before/After Slider -->
+<!-- Before/After -->
 <section class="before-after">
   <h2>See the Difference</h2>
 
   <div class="ba-grid">
 
-    <div class="ba-item">
-      <img src="/assets/images/Driveway.PNG" alt="Driveway before and after cleaning">
+    <!-- Repeatable Item -->
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/Driveway.PNG" alt="Driveway cleaning before and after">
       <p>Driveway Cleaning</p>
     </div>
 
-    <div class="ba-item">
-      <img src="/assets/images/driveway2.JPEG" alt="Driveway before and after cleaning">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/driveway2.JPEG" alt="Driveway cleaning before and after">
       <p>Driveway Cleaning</p>
     </div>
 
-    <div class="ba-item">
-      <img src="/assets/images/house.PNG" alt="House before and after washing">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/house.PNG" alt="House washing before and after">
       <p>House Washing</p>
     </div>
 
-    <div class="ba-item">
-      <img src="/assets/images/house2.PNG" alt="House before and after washing">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/house2.PNG" alt="House washing before and after">
       <p>House Washing</p>
     </div>
 
-        <div class="ba-item">
-      <img src="/assets/images/house3.PNG" alt="House before and after washing">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/house3.PNG" alt="House washing before and after">
       <p>House Washing</p>
     </div>
 
-    <div class="ba-item">
-      <img src="/assets/images/patio.PNG" alt="Patio before and after cleaning">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/patio.PNG" alt="Patio cleaning before and after">
       <p>Patio Cleaning</p>
     </div>
 
-    <div class="ba-item">
-      <img src="/assets/images/walkway.JPEG" alt="Patio before and after cleaning">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/walkway.JPEG" alt="Walkway cleaning before and after">
       <p>Walkway Cleaning</p>
     </div>
 
-    <div class="ba-item">
-      <img src="/assets/images/walkway2.PNG" alt="Patio before and after cleaning">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/walkway2.PNG" alt="Walkway cleaning before and after">
       <p>Walkway Cleaning</p>
     </div>
     
-    <div class="ba-item">
-      <img src="/assets/images/sidewalk.PNG" alt="Patio before and after cleaning">
-      <p>Walkway Cleaning</p>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/sidewalk.PNG" alt="Sidewalk cleaning before and after">
+      <p>Sidewalk Cleaning</p>
     </div>
+
   </div>
 </section>
 
@@ -142,6 +161,22 @@
   <p>Call now for fast service in Noblesville and nearby areas.</p>
   <a class="cta" href="tel:13179038066">📞 Call (317) 903-8066</a>
 </section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(el) {
+  const img = el.querySelector("img");
+  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
