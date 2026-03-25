@@ -1,9 +1,9 @@
 /* --- Global Styles --- */
 :root {
-  --primary-blue: #0056b3; /* Deep Professional Blue from Logo */
-  --accent-blue: #00aaff;  /* Bright Water Blue from Logo */
-  --dark-navy: #0a192f;   /* Header/Text Navy */
-  --light-bg: #f4f7f9;    /* Soft Gray Background */
+  --primary-blue: #0056b3; /* Professional Blue */
+  --accent-blue: #00aaff;  /* Action Water Blue */
+  --dark-navy: #0a192f;    /* Brand Navy */
+  --light-bg: #f4f7f9;    /* Section Background */
   --white: #ffffff;
   --transition: all 0.3s ease;
 }
@@ -47,10 +47,9 @@ h1, h2, h3 {
 }
 
 .main-logo {
-  height: 90px; /* Optimized for the AZ-Logo.jpg aspect ratio */
+  height: 95px; /* Size optimized for the new V2 Logo */
   width: auto;
   transition: var(--transition);
-  mix-blend-mode: multiply; /* Makes the white background transparent */
 }
 
 .lang-switch .lang-btn {
@@ -59,7 +58,7 @@ h1, h2, h3 {
   font-weight: bold;
   padding: 8px 18px;
   border: 2px solid #ddd;
-  border-radius: 25px; /* Modern pill shape */
+  border-radius: 25px;
   margin-left: 8px;
   transition: var(--transition);
   font-size: 0.9rem;
@@ -79,17 +78,17 @@ h1, h2, h3 {
 /* --- Hero Section --- */
 .hero {
   position: relative;
-  min-height: 75vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding: 60px 5%;
-  /* Using background-house.jpg with a white-to-transparent gradient for text contrast */
-  background: linear-gradient(to right, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0.1)), 
-              url('/assets/images/background-house.jpg') no-repeat center center/cover;
+  /* Using the new V2 background with a darker gradient for maximum text readability */
+  background: linear-gradient(to right, rgba(10, 25, 47, 0.85) 40%, rgba(10, 25, 47, 0.2)), 
+              url('/assets/images/AZ-BG-Surface-V2.jpg') no-repeat center center/cover;
 }
 
 .hero-content {
-  max-width: 650px;
+  max-width: 700px;
   z-index: 2;
 }
 
@@ -100,36 +99,41 @@ h1, h2, h3 {
   display: inline-block;
   border-bottom: 3px solid var(--accent-blue);
   padding-bottom: 5px;
+  letter-spacing: 2px;
 }
 
 .hero h1 {
-  font-size: 3.2rem;
-  color: var(--dark-navy);
+  font-size: 3.5rem;
+  color: var(--white); /* White text looks better against the navy background */
   margin-bottom: 20px;
   line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 30px;
+  color: rgba(255,255,255,0.9);
 }
 
 .cta {
   display: inline-block;
-  background: var(--primary-blue);
+  background: var(--accent-blue);
   color: var(--white);
-  padding: 18px 35px;
+  padding: 20px 40px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
+  text-transform: uppercase;
 }
 
 .cta:hover {
-  background: var(--accent-blue);
+  background: var(--white);
+  color: var(--primary-blue);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 170, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Content Sections --- */
@@ -155,11 +159,15 @@ section {
   border-radius: 12px;
   transition: var(--transition);
   background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card h3 {
   color: var(--primary-blue);
   margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 .card:hover {
@@ -206,16 +214,19 @@ section {
 }
 
 .ba-item p {
-  padding: 10px;
+  padding: 15px;
   background: var(--white);
   font-weight: bold;
   color: var(--primary-blue);
+  border-top: 1px solid #eee;
 }
 
 /* --- Quote Form --- */
 .quote-form { 
   background: var(--dark-navy); 
   color: white;
+  background-image: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('/assets/images/AZ-BG-Surface-V2.jpg');
+  background-size: cover;
 }
 
 .quote-form h2 { color: var(--accent-blue); }
@@ -234,6 +245,7 @@ section {
   border: 2px solid transparent;
   font-family: inherit;
   font-size: 1rem;
+  background: rgba(255,255,255,0.95);
 }
 
 .quote-form input:focus, .quote-form textarea:focus {
@@ -255,7 +267,8 @@ section {
 }
 
 .quote-form button:hover {
-  background: #0088cc;
+  background: var(--white);
+  color: var(--dark-navy);
   letter-spacing: 2px;
 }
 
@@ -281,8 +294,8 @@ section {
 /* --- Responsive --- */
 @media (max-width: 992px) {
   .hero {
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
-                url('/assets/images/background-house.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
+                url('/assets/images/AZ-BG-Surface-V2.jpg') no-repeat center center/cover;
     text-align: center;
     justify-content: center;
   }
@@ -293,4 +306,5 @@ section {
   .navbar { flex-direction: column; gap: 20px; padding: 20px; }
   .hero h1 { font-size: 2.2rem; }
   section { padding: 60px 5%; }
+  .ba-grid { grid-template-columns: 1fr; }
 }
