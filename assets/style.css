@@ -50,6 +50,7 @@ h1, h2, h3 {
   height: 90px; /* Optimized for the AZ-Logo.jpg aspect ratio */
   width: auto;
   transition: var(--transition);
+  mix-blend-mode: multiply; /* Makes the white background transparent */
 }
 
 .lang-switch .lang-btn {
