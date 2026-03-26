@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AZ Powerwash: Premier exterior cleaning solutions in Noblesville. Call (317) 903-8066 for a free quote.">
   <title>AZ PowerWash | Premier Exterior Cleaning</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <nav class="navbar">
   <div class="logo-container">
-    <img src="/assets/images/AZ-Logo-V2.png" alt="AZ Powerwash Logo" class="main-logo">
+    <img src="assets/images/AZ-Logo-V2.png" alt="AZ Powerwash Logo" class="main-logo">
   </div>
   <div class="lang-switch">
-    <a class="lang-btn active" href="/en/">EN</a>
-    <a class="lang-btn" href="/es/">ES</a>
+    <a class="lang-btn active" href="index.html">EN</a>
+    <a class="lang-btn" href="es/index.html">ES</a>
   </div>
 </nav>
 
@@ -32,83 +30,26 @@
   </div>
 </header>
 
-<section class="reviews">
-  <h2>Highly Rated by Local Homeowners</h2>
-  <div class="stars">★★★★★</div>
-  <p>5.0 stars from satisfied customers in Noblesville, Fishers, and Carmel</p>
-</section>
-
 <section class="services">
-  <h2>Our Professional Services</h2>
-  <div class="card">
-    <h3>House Washing</h3>
-    <p>Safe low-pressure soft washing to restore your home's siding without damage.</p>
-  </div>
-  <div class="card">
-    <h3>Driveway & Concrete</h3>
-    <p>Deep cleaning for driveways and sidewalks to remove oil, grime, and mildew.</p>
-  </div>
-  <div class="card">
-    <h3>Deck & Patio</h3>
-    <p>Revitalize your outdoor living spaces and make your wood or stone look new.</p>
-  </div>
-  <div class="card">
-    <h3>Fence Cleaning</h3>
-    <p>Professional cleaning to extend the life and beauty of your property's fencing.</p>
-  </div>
-  <div class="card">
-    <h3>Commercial Washing</h3>
-    <p>Keep your storefront or commercial property looking professional and inviting.</p>
-  </div>
-</section>
-
-<section class="before-after">
-  <h2>The AZ Difference</h2>
-  <div class="ba-grid">
-    <div class="ba-item" onclick="openLightbox(this)">
-      <div class="ba-labels"><span>Before</span><span>After</span></div>
-      <img src="/assets/images/Driveway.PNG" alt="Driveway cleaning before and after">
-      <p>Driveway Restoration</p>
-    </div>
-    <div class="ba-item" onclick="openLightbox(this)">
-      <div class="ba-labels"><span>Before</span><span>After</span></div>
-      <img src="/assets/images/house.PNG" alt="House washing before and after">
-      <p>Full House Soft Wash</p>
-    </div>
-    <div class="ba-item" onclick="openLightbox(this)">
-      <div class="ba-labels"><span>Before</span><span>After</span></div>
-      <img src="/assets/images/patio.PNG" alt="Patio cleaning before and after">
-      <p>Patio & Paver Cleaning</p>
-    </div>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card"><h3>House Washing</h3><p>Safe soft-washing for your siding.</p></div>
+    <div class="card"><h3>Concrete</h3><p>Driveways and sidewalks cleaned deep.</p></div>
+    <div class="card"><h3>Decks & Patios</h3><p>Make your wood or stone look new.</p></div>
   </div>
 </section>
 
 <section id="quote" class="quote-form">
-  <h2>Request Your Free Estimate</h2>
-  <p>Ready to clean? Fill out the form below for a fast, free quote.</p>
+  <h2>Get a Free Quote</h2>
   <form action="https://formspree.io/f/mkopnrez" method="POST">
+    <input type="hidden" name="_next" value="https://azpowerwash.pocketsod.com/thank-you.html">
     <input type="text" name="name" placeholder="Full Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="message" placeholder="Please describe the services you need (e.g., house wash, driveway cleaning)..." rows="4"></textarea>
-    <button type="submit">Send Quote Request</button>
+    <input type="tel" name="phone" placeholder="Phone" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="What needs cleaning?" rows="4"></textarea>
+    <button type="submit">Send Request</button>
   </form>
 </section>
-
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" alt="Enlarged gallery view">
-</div>
-
-<script>
-function openLightbox(el) {
-  const img = el.querySelector("img");
-  document.getElementById("lightbox-img").src = img.src;
-  document.getElementById("lightbox").style.display = "flex";
-}
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
 
 </body>
 </html>
