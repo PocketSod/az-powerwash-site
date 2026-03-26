@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AZ Powerwash: Soluciones de limpieza exterior de primera clase en Noblesville.">
-  <title>AZ PowerWash | Limpieza Exterior</title>
+  <meta name="description" content="AZ Powerwash: Soluciones de limpieza exterior de primera clase en Noblesville. Llame al (317) 903-8066 para un presupuesto gratuito.">
+  <title>AZ PowerWash | Limpieza Exterior de Primera Clase</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -22,44 +22,108 @@
 
 <header class="hero">
   <div class="hero-content">
-    <p class="subtitle">SOLUCIONES DE LIMPIEZA EXTERIOR</p>
+    <p class="subtitle">SOLUCIONES DE LIMPIEZA EXTERIOR DE PRIMERA CLASE</p>
     <h1>Transforme su Propiedad con AZ Powerwash</h1>
-    <p>De propiedad y operación local. Servicio rápido, económico y confiable para hogares y negocios en Noblesville.</p>
+    <p><strong>De propiedad y operación local.</strong> Servicio rápido, económico y confiable para hogares y negocios en Noblesville.</p>
     <div class="hero-btns">
         <a class="cta" href="tel:13179038066">📞 Llamar: (317) 903-8066</a>
     </div>
   </div>
 </header>
 
+<section class="reviews">
+  <h2>Altamente Calificado por Propietarios Locales</h2>
+  <div class="stars">★★★★★</div>
+  <p>5.0 estrellas de clientes satisfechos en Noblesville, Fishers y Carmel</p>
+</section>
+
 <section class="services">
-  <h2>Nuestros Servicios</h2>
-  <div class="services-grid">
-    <div class="card">
-      <h3>Lavado de Casas</h3>
-      <p>Lavado suave para restaurar el revestimiento de su casa sin daños.</p>
+  <h2>Nuestros Servicios Profesionales</h2>
+  <div class="card">
+    <h3>Lavado de Casas</h3>
+    <p>Lavado suave a baja presión para restaurar el revestimiento de su casa sin daños.</p>
+  </div>
+  <div class="card">
+    <h3>Entradas y Concreto</h3>
+    <p>Limpieza profunda de entradas y aceras para eliminar aceite, suciedad y moho.</p>
+  </div>
+  <div class="card">
+    <h3>Terrazas y Patios</h3>
+    <p>Revitalice sus espacios al aire libre y haga que la madera o piedra luzca como nueva.</p>
+  </div>
+  <div class="card">
+    <h3>Limpieza de Cercas</h3>
+    <p>Limpieza profesional para extender la vida y belleza de las cercas de su propiedad.</p>
+  </div>
+  <div class="card">
+    <h3>Lavado Comercial</h3>
+    <p>Mantenga su propiedad comercial limpia y atractiva.</p>
+  </div>
+</section>
+
+<section class="before-after">
+  <h2>Vea la Diferencia</h2>
+  <div class="ba-grid">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Antes</span><span>Después</span></div>
+      <img src="/assets/images/Driveway.PNG" alt="Limpieza de entrada antes y después">
+      <p>Limpieza de Entrada</p>
     </div>
-    <div class="card">
-      <h3>Entradas y Concreto</h3>
-      <p>Limpieza profunda para eliminar aceite, suciedad y moho.</p>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Antes</span><span>Después</span></div>
+      <img src="/assets/images/house.PNG" alt="Lavado de casa antes y después">
+      <p>Lavado de Casa</p>
     </div>
-    <div class="card">
-      <h3>Terrazas y Patios</h3>
-      <p>Revitalice sus espacios al aire libre y haga que luzcan como nuevos.</p>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Antes</span><span>Después</span></div>
+      <img src="/assets/images/patio.PNG" alt="Limpieza de patio antes y después">
+      <p>Limpieza de Patio</p>
+    </div>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Antes</span><span>Después</span></div>
+      <img src="/assets/images/walkway.JPEG" alt="Limpieza de camino antes y después">
+      <p>Limpieza de Camino</p>
+    </div>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Antes</span><span>Después</span></div>
+      <img src="/assets/images/walkway2.PNG" alt="Limpieza de camino antes y después">
+      <p>Limpieza de Camino</p>
+    </div>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Antes</span><span>Después</span></div>
+      <img src="/assets/images/sidewalk.PNG" alt="Limpieza de acera antes y después">
+      <p>Limpieza de Acera</p>
     </div>
   </div>
 </section>
 
 <section id="quote" class="quote-form">
-  <h2>Presupuesto Gratuito</h2>
+  <h2>Solicite un Presupuesto Gratuito</h2>
+  <p>Complete el formulario a continuación y nos pondremos en contacto con usted rápidamente.</p>
   <form action="https://formspree.io/f/mkopnrez" method="POST">
     <input type="hidden" name="_next" value="https://azpowerwash.pocketsod.com/es/gracias.html">
-    <input type="text" name="name" placeholder="Nombre" required>
-    <input type="tel" name="phone" placeholder="Teléfono" required>
-    <input type="email" name="email" placeholder="Correo" required>
-    <textarea name="message" placeholder="¿Qué necesita limpiar?" rows="4"></textarea>
+    <input type="text" name="name" placeholder="Su Nombre" required>
+    <input type="tel" name="phone" placeholder="Número de Teléfono" required>
+    <input type="email" name="email" placeholder="Correo Electrónico" required>
+    <textarea name="message" placeholder="¿Qué necesita que limpiemos?" rows="4"></textarea>
     <button type="submit">Enviar Solicitud</button>
   </form>
 </section>
+
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" alt="Vista de galería ampliada">
+</div>
+
+<script>
+function openLightbox(el) {
+  const img = el.querySelector("img");
+  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 <footer style="padding: 40px; text-align: center; color: var(--dark-navy);">
     &copy; 2026 AZ Powerwash | Noblesville, IN
