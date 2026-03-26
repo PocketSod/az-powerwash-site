@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AZ Powerwash: Premier exterior cleaning solutions in Noblesville. Call (317) 903-8066 for a free quote.">
   <title>AZ PowerWash | Premier Exterior Cleaning</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -24,33 +25,82 @@
   <div class="hero-content">
     <p class="subtitle">PREMIER EXTERIOR CLEANING SOLUTIONS</p>
     <h1>Transform Your Property with AZ Powerwash</h1>
-    <p>Locally owned and operated. Fast, affordable, and reliable service for homes and businesses in Noblesville and surrounding areas.</p>
+    <p><strong>Locally owned and operated.</strong> Fast, affordable, and reliable service for homes and businesses in Noblesville and surrounding areas.</p>
     <div class="hero-btns">
         <a class="cta" href="tel:13179038066">📞 Call Now: (317) 903-8066</a>
     </div>
   </div>
 </header>
 
+<section class="reviews">
+  <h2>Highly Rated by Local Homeowners</h2>
+  <div class="stars">★★★★★</div>
+  <p>5.0 stars from satisfied customers in Noblesville, Fishers, and Carmel</p>
+</section>
+
 <section class="services">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-    <div class="card">
-      <h3>House Washing</h3>
-      <p>Safe low-pressure soft washing to restore your home's siding.</p>
+  <h2>Our Professional Services</h2>
+  <div class="card">
+    <h3>House Washing</h3>
+    <p>Safe low-pressure soft washing to restore your home's siding without damage.</p>
+  </div>
+  <div class="card">
+    <h3>Driveway & Concrete</h3>
+    <p>Deep cleaning for driveways and sidewalks to remove oil, grime, and mildew.</p>
+  </div>
+  <div class="card">
+    <h3>Deck & Patio</h3>
+    <p>Revitalize your outdoor living spaces and make your wood or stone look new.</p>
+  </div>
+  <div class="card">
+    <h3>Fence Cleaning</h3>
+    <p>Professional cleaning to extend the life and beauty of your property's fencing.</p>
+  </div>
+  <div class="card">
+    <h3>Commercial Washing</h3>
+    <p>Keep your storefront or commercial property looking professional and inviting.</p>
+  </div>
+</section>
+
+<section class="before-after">
+  <h2>See the Difference</h2>
+  <div class="ba-grid">
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/Driveway.PNG" alt="Driveway cleaning before and after">
+      <p>Driveway Restoration</p>
     </div>
-    <div class="card">
-      <h3>Concrete Cleaning</h3>
-      <p>Deep cleaning for driveways and sidewalks to remove oil and grime.</p>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/house.PNG" alt="House washing before and after">
+      <p>Full House Soft Wash</p>
     </div>
-    <div class="card">
-      <h3>Deck & Patio</h3>
-      <p>Revitalize your outdoor living spaces and make wood or stone look new.</p>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/patio.PNG" alt="Patio cleaning before and after">
+      <p>Patio & Paver Cleaning</p>
+    </div>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/walkway.JPEG" alt="Walkway cleaning before and after">
+      <p>Walkway Cleaning</p>
+    </div>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/walkway2.PNG" alt="Walkway cleaning before and after">
+      <p>Walkway Restoration</p>
+    </div>
+    <div class="ba-item" onclick="openLightbox(this)">
+      <div class="ba-labels"><span>Before</span><span>After</span></div>
+      <img src="/assets/images/sidewalk.PNG" alt="Sidewalk cleaning before and after">
+      <p>Sidewalk Cleaning</p>
     </div>
   </div>
 </section>
 
 <section id="quote" class="quote-form">
   <h2>Request a Free Quote</h2>
+  <p>Fill out the form below and we’ll get back to you quickly.</p>
   <form action="https://formspree.io/f/mkopnrez" method="POST">
     <input type="hidden" name="_next" value="https://azpowerwash.pocketsod.com/thank-you.html">
     <input type="text" name="name" placeholder="Full Name" required>
@@ -60,6 +110,21 @@
     <button type="submit">Get My Free Quote</button>
   </form>
 </section>
+
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" alt="Enlarged gallery view">
+</div>
+
+<script>
+function openLightbox(el) {
+  const img = el.querySelector("img");
+  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 <footer style="padding: 40px; text-align: center; color: var(--dark-navy);">
     &copy; 2026 AZ Powerwash | Noblesville, IN
